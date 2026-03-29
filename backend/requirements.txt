@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pydantic
+openai
+motor
+python-multipart
+python-dotenv
+pytest
