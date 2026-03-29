@@ -74,18 +74,18 @@ function App() {
   ].filter(d => d.value > 0);
 
   return (
-    <div className="min-h-screen bg-[#0f172a] text-slate-200 font-sans p-4 md:p-8">
+    <div className="min-h-screen bg-black text-zinc-200 font-sans p-4 md:p-8">
       {/* Header */}
       <header className="max-w-7xl mx-auto flex justify-between items-center mb-12">
         <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
-            <TrendingUp className="text-white w-6 h-6" />
+          <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg shadow-white/10">
+            <TrendingUp className="text-black w-6 h-6" />
           </div>
           <h1 className="text-2xl font-bold tracking-tight text-white italic">Money Mentor AI</h1>
         </div>
         <div className="flex items-center gap-4">
-          <span className="text-xs text-slate-500 hidden md:block">Hackathon Build v2.0</span>
-          <button className="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-lg transition-colors border border-slate-700">
+          <span className="text-xs text-zinc-500 hidden md:block">Hackathon Build v2.0</span>
+          <button className="bg-zinc-800 hover:bg-zinc-700 text-white px-4 py-2 rounded-lg transition-colors border border-zinc-700">
             Connect Bank
           </button>
         </div>
@@ -94,112 +94,112 @@ function App() {
       <main className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left Column: Inputs */}
         <section className="lg:col-span-4 space-y-6">
-          <div className="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl backdrop-blur-sm">
+          <div className="bg-zinc-900/50 border border-zinc-800 p-6 rounded-2xl backdrop-blur-sm">
             <h2 className="text-xl font-semibold mb-6 flex items-center gap-2 text-white">
-              <Wallet className="w-5 h-5 text-blue-400" />
+              <Wallet className="w-5 h-5 text-zinc-400" />
               Financial Profile
             </h2>
             
             <div className="space-y-4">
               <div>
-                <label className="block text-sm text-slate-400 mb-1">Monthly Income (₹)</label>
+                  <label className="block text-sm text-zinc-400 mb-1">Monthly Income (₹)</label>
                 <input 
                   type="number" 
                   value={inputs.income}
                   onChange={(e) => setInputs({...inputs, income: Number(e.target.value)})}
-                  className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all font-mono"
+                  className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all font-mono"
                 />
               </div>
               <div>
-                <label className="block text-sm text-slate-400 mb-1">Monthly Expenses (₹)</label>
+                <label className="block text-sm text-zinc-400 mb-1">Monthly Expenses (₹)</label>
                 <input 
                   type="number" 
                   value={inputs.expenses}
                   onChange={(e) => setInputs({...inputs, expenses: Number(e.target.value)})}
-                  className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all font-mono"
+                  className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all font-mono"
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm text-slate-400 mb-1">Total Savings (₹)</label>
+                  <label className="block text-sm text-zinc-400 mb-1">Total Savings (₹)</label>
                   <input 
                     type="number" 
                     value={inputs.savings}
                     onChange={(e) => setInputs({...inputs, savings: Number(e.target.value)})}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all font-mono"
+                    className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all font-mono"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm text-slate-400 mb-1">Total Debt (₹)</label>
+                  <label className="block text-sm text-zinc-400 mb-1">Total Debt (₹)</label>
                   <input 
                     type="number" 
                     value={inputs.loans}
                     onChange={(e) => setInputs({...inputs, loans: Number(e.target.value)})}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all font-mono"
+                    className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all font-mono"
                   />
                 </div>
               </div>
               <div>
-                <label className="block text-sm text-slate-400 mb-1">Total Investments (₹)</label>
+                <label className="block text-sm text-zinc-400 mb-1">Total Investments (₹)</label>
                 <input 
                   type="number" 
                   value={inputs.investments}
                   onChange={(e) => setInputs({...inputs, investments: Number(e.target.value)})}
-                  className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all font-mono"
+                  className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all font-mono"
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm text-slate-400 mb-1">Current Age</label>
+                  <label className="block text-sm text-zinc-400 mb-1">Current Age</label>
                   <input 
                     type="number" 
                     value={inputs.age}
                     onChange={(e) => setInputs({...inputs, age: Number(e.target.value)})}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all"
+                    className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm text-slate-400 mb-1">FIRE Target Age</label>
+                  <label className="block text-sm text-zinc-400 mb-1">FIRE Target Age</label>
                   <input 
                     type="number" 
                     value={inputs.retirement_age}
                     onChange={(e) => setInputs({...inputs, retirement_age: Number(e.target.value)})}
-                    className="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all"
+                    className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all"
                   />
                 </div>
               </div>
 
               {/* Tax Deductions Section */}
-              <div className="pt-4 border-t border-slate-800">
-                <h3 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Tax Optimization (Annual)</h3>
+              <div className="pt-4 border-t border-zinc-800">
+                <h3 className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-4">Tax Optimization (Annual)</h3>
                 <div className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-[10px] text-slate-400 mb-1">Section 80C (₹)</label>
+                      <label className="block text-[10px] text-zinc-400 mb-1">Section 80C (₹)</label>
                       <input 
                         type="number" 
                         value={inputs.tax_80c}
                         onChange={(e) => setInputs({...inputs, tax_80c: Number(e.target.value)})}
-                        className="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-3 py-1.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-blue-500/50 transition-all font-mono"
+                        className="w-full bg-zinc-800/50 border border-zinc-700 rounded-lg px-3 py-1.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all font-mono"
                       />
                     </div>
                     <div>
-                      <label className="block text-[10px] text-slate-400 mb-1">Section 80D (₹)</label>
+                      <label className="block text-[10px] text-zinc-400 mb-1">Section 80D (₹)</label>
                       <input 
                         type="number" 
                         value={inputs.tax_80d}
                         onChange={(e) => setInputs({...inputs, tax_80d: Number(e.target.value)})}
-                        className="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-3 py-1.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-blue-500/50 transition-all font-mono"
+                        className="w-full bg-zinc-800/50 border border-zinc-700 rounded-lg px-3 py-1.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all font-mono"
                       />
                     </div>
                   </div>
                   <div>
-                    <label className="block text-[10px] text-slate-400 mb-1">NPS - 80CCD(1B) (₹)</label>
+                    <label className="block text-[10px] text-zinc-400 mb-1">NPS - 80CCD(1B) (₹)</label>
                     <input 
                       type="number" 
                       value={inputs.tax_nps}
                       onChange={(e) => setInputs({...inputs, tax_nps: Number(e.target.value)})}
-                      className="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-3 py-1.5 text-sm text-white focus:outline-none focus:ring-1 focus:ring-blue-500/50 transition-all font-mono"
+                      className="w-full bg-zinc-800/50 border border-zinc-700 rounded-lg px-3 py-1.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all font-mono"
                       placeholder="Max 50,000"
                     />
                   </div>
@@ -209,10 +209,10 @@ function App() {
               <button 
                 onClick={calculateResults}
                 disabled={loading}
-                className="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 rounded-xl mt-4 transition-all shadow-lg shadow-blue-500/20 flex items-center justify-center gap-2"
+                className="w-full bg-white hover:bg-zinc-200 text-black font-semibold py-3 rounded-xl mt-4 transition-all shadow-lg shadow-white/10 flex items-center justify-center gap-2"
               >
-                {loading ? <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" /> : <Zap className="w-5 h-5" />}
-                Run AI Health Check
+                {loading ? <div className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin" /> : <Zap className="w-5 h-5" />}
+                AI Analysis
               </button>
             </div>
           </div>
@@ -226,40 +226,40 @@ function App() {
             <>
               {/* Score Cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-gradient-to-br from-blue-600 to-indigo-700 p-8 rounded-3xl text-white shadow-xl shadow-blue-500/10 relative overflow-hidden group">
+                <div className="bg-gradient-to-br from-zinc-800 to-black p-8 rounded-3xl text-white shadow-xl shadow-white/5 relative overflow-hidden group border border-zinc-800">
                   <div className="absolute -right-8 -bottom-8 opacity-10 group-hover:scale-110 transition-transform duration-500">
                     <ShieldCheck className="w-48 h-48" />
                   </div>
-                  <h3 className="text-blue-100 font-medium mb-1 uppercase text-xs tracking-widest leading-none">Wealth Health Grade</h3>
+                  <h3 className="text-zinc-400 font-medium mb-1 uppercase text-xs tracking-widest leading-none">Wealth Health Grade</h3>
                   <div className="flex items-baseline gap-4 mb-4">
                     <div className="text-6xl font-bold">{Math.round(healthScore.overall_score)}</div>
-                    <div className="text-xl font-medium text-blue-200">/ 100</div>
+                    <div className="text-xl font-medium text-zinc-500">/ 100</div>
                   </div>
-                  <div className="bg-white/20 h-1.5 w-full rounded-full overflow-hidden">
+                  <div className="bg-white/10 h-1.5 w-full rounded-full overflow-hidden">
                     <div className="bg-white h-full transition-all duration-1000 ease-out" style={{ width: `${healthScore.overall_score}%` }}></div>
                   </div>
                   <p className="mt-4 text-white text-sm font-semibold italic flex items-center gap-2">
-                    <Sparkles className="w-4 h-4" />
+                    <Sparkles className="w-4 h-4 text-zinc-400" />
                     Status: {healthScore.status}
                   </p>
                 </div>
 
-                <div className="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl relative overflow-hidden group flex flex-col justify-center">
-                  <h3 className="text-slate-400 font-medium mb-1 uppercase text-xs tracking-widest leading-none">Retirement Corpus (FIRE)</h3>
+                <div className="bg-zinc-900/50 border border-zinc-800 p-8 rounded-3xl relative overflow-hidden group flex flex-col justify-center">
+                  <h3 className="text-zinc-400 font-medium mb-1 uppercase text-xs tracking-widest leading-none">Retirement Corpus (FIRE)</h3>
                   {firePlan && (
                     <>
                       <div className="text-4xl font-bold text-white mb-1">₹{(firePlan.fire_number / 10000000).toFixed(2)} Cr</div>
-                      <p className="text-slate-500 text-[10px] uppercase tracking-wider mb-4">Inflation-Adjusted Target</p>
+                      <p className="text-zinc-500 text-[10px] uppercase tracking-wider mb-4">Inflation-Adjusted Target</p>
                       
                       <div className="space-y-3">
                         <div className="flex justify-between items-center text-sm">
-                          <span className="text-slate-400">Future Monthly Exp:</span>
+                          <span className="text-zinc-400">Future Monthly Exp:</span>
                           <span className="text-white font-mono">₹{Math.round(firePlan.future_monthly_expenses).toLocaleString()}</span>
                         </div>
                         {firePlan.required_sip > 0 && (
                           <div className="flex justify-between items-center text-sm">
-                            <span className="text-blue-400 font-semibold">Required Monthly SIP:</span>
-                            <span className="text-blue-400 font-bold font-mono">₹{Math.round(firePlan.required_sip).toLocaleString()}</span>
+                            <span className="text-white font-semibold">Required Monthly SIP:</span>
+                            <span className="text-white font-bold font-mono">₹{Math.round(firePlan.required_sip).toLocaleString()}</span>
                           </div>
                         )}
                       </div>
@@ -275,13 +275,13 @@ function App() {
               {/* Breakdown Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {[
-                  { label: 'Savings', val: healthScore.breakdown.savings, color: 'text-blue-400' },
-                  { label: 'Emergency', val: healthScore.breakdown.emergency, color: 'text-indigo-400' },
-                  { label: 'Debt', val: healthScore.breakdown.debt, color: 'text-amber-400' },
-                  { label: 'Invest', val: healthScore.breakdown.investment, color: 'text-emerald-400' }
+                  { label: 'Savings', val: healthScore.breakdown.savings, color: 'text-zinc-400' },
+                  { label: 'Emergency', val: healthScore.breakdown.emergency, color: 'text-zinc-500' },
+                  { label: 'Debt', val: healthScore.breakdown.debt, color: 'text-zinc-300' },
+                  { label: 'Invest', val: healthScore.breakdown.investment, color: 'text-white' }
                 ].map((item) => (
-                  <div key={item.label} className="bg-slate-900/30 border border-slate-800 p-4 rounded-2xl text-center">
-                    <div className="text-[10px] text-slate-500 uppercase tracking-widest mb-1">{item.label}</div>
+                  <div key={item.label} className="bg-zinc-900/30 border border-zinc-800 p-4 rounded-2xl text-center">
+                    <div className="text-[10px] text-zinc-500 uppercase tracking-widest mb-1">{item.label}</div>
                     <div className={`text-xl font-bold ${item.color}`}>{Math.round(item.val)}%</div>
                   </div>
                 ))}
@@ -291,31 +291,31 @@ function App() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                  {/* Tax Wizard Section */}
                 {taxData && (
-                  <div className="bg-slate-900/50 border border-slate-800 p-6 rounded-3xl">
+                  <div className="bg-zinc-900/50 border border-zinc-800 p-6 rounded-3xl">
                     <h3 className="text-white font-semibold flex items-center gap-2 mb-6 text-sm">
-                      <Calculator className="w-5 h-5 text-blue-400" />
+                      <Calculator className="w-5 h-5 text-zinc-400" />
                       Tax Minimization (FY 24-25)
                     </h3>
                     <div className="grid grid-cols-2 gap-4">
-                      <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700 text-center">
-                        <div className="text-[10px] text-slate-400 uppercase mb-1">New Regime</div>
+                      <div className="p-4 rounded-2xl bg-zinc-800/50 border border-zinc-700 text-center">
+                        <div className="text-[10px] text-zinc-400 uppercase mb-1">New Regime</div>
                         <div className="text-lg font-bold text-white">₹{(taxData.new_regime_tax/1000).toFixed(1)}k</div>
                       </div>
-                      <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700 text-center">
-                        <div className="text-[10px] text-slate-400 uppercase mb-1">Old Regime</div>
+                      <div className="p-4 rounded-2xl bg-zinc-800/50 border border-zinc-700 text-center">
+                        <div className="text-[10px] text-zinc-400 uppercase mb-1">Old Regime</div>
                         <div className="text-lg font-bold text-white">₹{(taxData.old_regime_tax/1000).toFixed(1)}k</div>
                       </div>
                     </div>
-                    <div className="mt-4 p-3 rounded-2xl bg-blue-600/10 border border-blue-500/20">
-                        <div className="text-[10px] text-blue-400 font-bold uppercase mb-1 text-center">AI Recommendation</div>
-                        <p className="text-xs text-blue-200 text-center">Switch to <strong>{taxData.recommendation} Regime</strong> to save ₹{taxData.savings.toLocaleString()}</p>
+                    <div className="mt-4 p-3 rounded-2xl bg-white/5 border border-white/10">
+                        <div className="text-[10px] text-zinc-400 font-bold uppercase mb-1 text-center">AI Recommendation</div>
+                        <p className="text-xs text-zinc-300 text-center">Switch to <strong>{taxData.recommendation} Regime</strong> to save ₹{taxData.savings.toLocaleString()}</p>
                     </div>
                     {taxData.potential_optimizations && taxData.potential_optimizations.filter((o: any) => o).length > 0 && (
                       <div className="mt-4 space-y-2">
-                        <div className="text-[10px] text-slate-500 font-bold uppercase mb-1">Optimization Tips</div>
+                        <div className="text-[10px] text-zinc-500 font-bold uppercase mb-1">Optimization Tips</div>
                         {taxData.potential_optimizations.map((opt: string, i: number) => opt && (
-                          <div key={i} className="flex items-center gap-2 text-[10px] text-slate-400 bg-slate-800/30 p-2 rounded-lg border border-slate-700/50">
-                            <Lightbulb className="w-3 h-3 text-amber-400" />
+                          <div key={i} className="flex items-center gap-2 text-[10px] text-zinc-400 bg-zinc-800/30 p-2 rounded-lg border border-zinc-700/50">
+                            <Lightbulb className="w-3 h-3 text-zinc-400" />
                             {opt}
                           </div>
                         ))}
@@ -325,26 +325,26 @@ function App() {
                 )}
 
                 {/* AI Risk Profile Card */}
-                <div className="bg-slate-900/50 border border-slate-800 p-6 rounded-3xl relative overflow-hidden group">
+                <div className="bg-zinc-900/50 border border-zinc-800 p-6 rounded-3xl relative overflow-hidden group">
                   <h3 className="text-white font-semibold flex items-center gap-2 mb-6">
-                    <ShieldCheck className="w-5 h-5 text-emerald-400" />
+                    <ShieldCheck className="w-5 h-5 text-zinc-400" />
                     AI Risk Profiler
                   </h3>
                   <div className="space-y-4">
                     <textarea 
-                      className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all h-20 placeholder:text-slate-600"
+                      className="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white/50 transition-all h-20 placeholder:text-zinc-600"
                       placeholder="Describe your financial goals and fears..."
                     />
-                    <button className="w-full bg-slate-800 hover:bg-slate-700 border border-slate-700 py-2 rounded-xl text-xs font-semibold text-white transition-all">Generate AI Profile</button>
+                    <button className="w-full bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 py-2 rounded-xl text-xs font-semibold text-white transition-all">Generate AI Profile</button>
                   </div>
                 </div>
               </div>
 
               {/* Chart Section */}
-              <div className="bg-slate-900/50 border border-slate-800 p-6 rounded-3xl">
+              <div className="bg-zinc-900/50 border border-zinc-800 p-6 rounded-3xl">
                 <div className="flex justify-between items-center mb-8">
                   <h3 className="text-white font-semibold flex items-center gap-2">
-                    <PieChartIcon className="w-5 h-5 text-blue-400" />
+                    <PieChartIcon className="w-5 h-5 text-zinc-400" />
                     Allocation Overview
                   </h3>
                 </div>
@@ -365,7 +365,7 @@ function App() {
                         ))}
                       </Pie>
                       <Tooltip 
-                        contentStyle={{ backgroundColor: '#1e293b', border: 'none', borderRadius: '12px', color: '#f8fafc' }}
+                        contentStyle={{ backgroundColor: '#18181b', border: 'none', borderRadius: '12px', color: '#f8fafc' }}
                         itemStyle={{ color: '#f8fafc' }}
                         formatter={(val: any) => `₹${Number(val).toLocaleString()}`}
                       />
@@ -375,7 +375,7 @@ function App() {
                     {pieData.map((d) => (
                       <div key={d.name} className="flex items-center gap-2">
                         <div className="w-2 h-2 rounded-full" style={{ backgroundColor: d.color }}></div>
-                        <span className="text-xs text-slate-400">{d.name}: ₹{(d.value/1000).toFixed(0)}k</span>
+                        <span className="text-xs text-zinc-400">{d.name}: ₹{(d.value/1000).toFixed(0)}k</span>
                       </div>
                     ))}
                   </div>
@@ -385,7 +385,7 @@ function App() {
               {/* Actionable Advice */}
               <div className="space-y-4">
                 <h3 className="text-white font-semibold flex items-center gap-2">
-                  <Zap className="w-5 h-5 text-blue-400" />
+                  <Zap className="w-5 h-5 text-zinc-400" />
                   AI Suggested Actions
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -400,50 +400,40 @@ function App() {
                       };
                       const Icon = icons[action.icon] || Zap;
 
-                      const colors: Record<string, string> = {
-                        indigo: 'bg-indigo-500/10 text-indigo-400 group-hover:text-indigo-400',
-                        emerald: 'bg-emerald-500/10 text-emerald-400 group-hover:text-emerald-400',
-                        blue: 'bg-blue-500/10 text-blue-400 group-hover:text-blue-400',
-                        amber: 'bg-amber-500/10 text-amber-400 group-hover:text-amber-400',
-                        rose: 'bg-rose-500/10 text-rose-400 group-hover:text-rose-400'
-                      };
-                      const colorClasses = colors[action.color] || 'bg-blue-500/10 text-blue-400 group-hover:text-blue-400';
-                      const [bgColor, textColor, hoverColor] = colorClasses.split(' ');
-
                       return (
-                        <div key={i} className="group bg-slate-900/50 border border-slate-800 p-6 rounded-2xl hover:bg-slate-800/50 transition-all cursor-pointer">
+                        <div key={i} className="group bg-zinc-900/50 border border-zinc-800 p-6 rounded-2xl hover:bg-zinc-800/50 transition-all cursor-pointer">
                           <div className="flex justify-between items-start mb-4">
-                            <div className={`p-3 rounded-xl ${bgColor}`}>
-                               <Icon className={`w-6 h-6 ${textColor}`} />
+                            <div className={`p-3 rounded-xl bg-white/10 text-white group-hover:bg-white group-hover:text-black`}>
+                               <Icon className={`w-6 h-6`} />
                             </div>
-                            <ChevronRight className={`w-5 h-5 text-slate-600 ${hoverColor} transition-colors`} />
+                            <ChevronRight className={`w-5 h-5 text-zinc-600 transition-colors group-hover:text-white`} />
                           </div>
                           <h4 className="font-semibold text-white mb-1 italic">{action.title}</h4>
-                          <p className="text-xs text-slate-400">{action.description}</p>
+                          <p className="text-xs text-zinc-400">{action.description}</p>
                         </div>
                       );
                     })
                   ) : (
                     <>
-                      <div className="group bg-slate-900/50 border border-slate-800 p-6 rounded-2xl hover:bg-slate-800/50 transition-all cursor-pointer">
+                      <div className="group bg-zinc-900/50 border border-zinc-800 p-6 rounded-2xl hover:bg-zinc-800/50 transition-all cursor-pointer">
                         <div className="flex justify-between items-start mb-4">
-                          <div className="p-3 bg-indigo-500/10 rounded-xl">
-                             <ShieldCheck className="w-6 h-6 text-indigo-400" />
+                          <div className="p-3 bg-white/10 rounded-xl text-white group-hover:bg-white group-hover:text-black transition-all">
+                             <ShieldCheck className="w-6 h-6" />
                           </div>
-                          <ChevronRight className="w-5 h-5 text-slate-600 group-hover:text-indigo-400 transition-colors" />
+                          <ChevronRight className="w-5 h-5 text-zinc-600 group-hover:text-white transition-colors" />
                         </div>
                         <h4 className="font-semibold text-white mb-1 italic">Tax Strategy</h4>
-                        <p className="text-xs text-slate-400">Optimize Section 80C to save an additional ₹15,000.</p>
+                        <p className="text-xs text-zinc-400">Optimize Section 80C to save an additional ₹15,000.</p>
                       </div>
-                      <div className="group bg-slate-900/50 border border-slate-800 p-6 rounded-2xl hover:bg-slate-800/50 transition-all cursor-pointer">
+                      <div className="group bg-zinc-900/50 border border-zinc-800 p-6 rounded-2xl hover:bg-zinc-800/50 transition-all cursor-pointer">
                         <div className="flex justify-between items-start mb-4">
-                          <div className="p-3 bg-emerald-500/10 rounded-xl">
-                             <PiggyBank className="w-6 h-6 text-emerald-400" />
+                          <div className="p-3 bg-white/10 rounded-xl text-white group-hover:bg-white group-hover:text-black transition-all">
+                             <PiggyBank className="w-6 h-6" />
                           </div>
-                          <ChevronRight className="w-5 h-5 text-slate-600 group-hover:text-emerald-400 transition-colors" />
+                          <ChevronRight className="w-5 h-5 text-zinc-600 group-hover:text-white transition-colors" />
                         </div>
                         <h4 className="font-semibold text-white mb-1 italic">Retirement Boost</h4>
-                        <p className="text-xs text-slate-400">Increase index fund weightage by 5% for better alpha.</p>
+                        <p className="text-xs text-zinc-400">Increase index fund weightage by 5% for better alpha.</p>
                       </div>
                     </>
                   )}
@@ -451,17 +441,17 @@ function App() {
               </div>
             </>
           ) : (
-            <div className="h-full flex flex-col items-center justify-center text-center p-12 bg-slate-900/30 border border-slate-800 border-dashed rounded-3xl">
-              <div className="w-20 h-20 bg-slate-800/50 rounded-full flex items-center justify-center mb-6">
-                <Lightbulb className="w-10 h-10 text-blue-500 animate-pulse" />
+            <div className="h-full flex flex-col items-center justify-center text-center p-12 bg-zinc-900/30 border border-zinc-800 border-dashed rounded-3xl">
+              <div className="w-20 h-20 bg-zinc-800/50 rounded-full flex items-center justify-center mb-6">
+                <Lightbulb className="w-10 h-10 text-white animate-pulse" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2 italic">Ready for AI Wealth Management?</h3>
-              <p className="text-slate-400 max-w-sm mb-8">
+              <p className="text-zinc-400 max-w-sm mb-8">
                 Enter your details to generate an AI-driven financial roadmap, health score, and risk profile.
               </p>
               <button 
                 onClick={calculateResults}
-                className="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-3 rounded-xl transition-all shadow-lg shadow-blue-500/20"
+                className="bg-white hover:bg-zinc-200 text-black font-semibold px-8 py-3 rounded-xl transition-all shadow-lg shadow-white/10"
               >
                 Start AI Analysis
               </button>
@@ -473,12 +463,12 @@ function App() {
       <ChatBot context={{ healthScore, firePlan, taxData, inputs }} />
       
       {/* Footer */}
-      <footer className="max-w-7xl mx-auto mt-20 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500 gap-4">
+      <footer className="max-w-7xl mx-auto mt-20 pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center text-sm text-zinc-500 gap-4">
         <p>© 2026 AI Money Mentor. Powered by Open Source Intelligence.</p>
         <div className="flex gap-6">
-          <a href="#" className="hover:text-blue-400">Security</a>
-          <a href="#" className="hover:text-blue-400">Privacy</a>
-          <a href="#" className="hover:text-blue-400">Terms</a>
+          <a href="#" className="hover:text-white">Security</a>
+          <a href="#" className="hover:text-white">Privacy</a>
+          <a href="#" className="hover:text-white">Terms</a>
         </div>
       </footer>
     </div>

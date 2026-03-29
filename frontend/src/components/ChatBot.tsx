@@ -40,14 +40,14 @@ export default function ChatBot({ context }: { context?: any }) {
   return (
     <div className="fixed bottom-8 right-8 z-50">
       {isOpen ? (
-        <div className="bg-slate-900 border border-slate-800 w-[350px] md:w-[400px] h-[500px] rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-5 duration-300">
+        <div className="bg-zinc-900 border border-zinc-800 w-[350px] md:w-[400px] h-[500px] rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-5 duration-300">
           {/* Header */}
-          <div className="bg-blue-600 p-4 flex justify-between items-center text-white">
+          <div className="bg-white p-4 flex justify-between items-center text-black">
             <div className="flex items-center gap-2">
               <MessageSquare className="w-5 h-5" />
               <span className="font-semibold">AI Money Mentor</span>
             </div>
-            <button onClick={() => setIsOpen(false)} className="hover:bg-white/20 p-1 rounded-lg transition-colors">
+            <button onClick={() => setIsOpen(false)} className="hover:bg-black/10 p-1 rounded-lg transition-colors">
               <X className="w-5 h-5" />
             </button>
           </div>
@@ -57,10 +57,10 @@ export default function ChatBot({ context }: { context?: any }) {
             {messages.map((msg, i) => (
               <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                 <div className={`flex gap-2 max-w-[80%] ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${msg.role === 'user' ? 'bg-slate-800 text-blue-400' : 'bg-blue-600 text-white'}`}>
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${msg.role === 'user' ? 'bg-zinc-800 text-white' : 'bg-white text-black'}`}>
                     {msg.role === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
                   </div>
-                  <div className={`p-3 rounded-2xl text-sm ${msg.role === 'user' ? 'bg-blue-600 text-white rounded-tr-none' : 'bg-slate-800 text-slate-200 rounded-tl-none'}`}>
+                  <div className={`p-3 rounded-2xl text-sm ${msg.role === 'user' ? 'bg-white text-black rounded-tr-none' : 'bg-zinc-800 text-zinc-200 rounded-tl-none'}`}>
                     {msg.content}
                   </div>
                 </div>
@@ -90,7 +90,7 @@ export default function ChatBot({ context }: { context?: any }) {
               />
               <button 
                 onClick={sendMessage}
-                className="bg-blue-600 hover:bg-blue-500 text-white p-2 rounded-xl transition-all shadow-lg shadow-blue-500/20"
+                className="bg-white hover:bg-zinc-200 text-black p-2 rounded-xl transition-all shadow-lg shadow-white/10"
               >
                 <Send className="w-5 h-5" />
               </button>
@@ -100,10 +100,10 @@ export default function ChatBot({ context }: { context?: any }) {
       ) : (
         <button 
           onClick={() => setIsOpen(true)}
-          className="bg-blue-600 hover:bg-blue-500 text-white p-4 rounded-2xl shadow-2xl shadow-blue-500/30 transition-all hover:scale-110 active:scale-95 group relative"
+          className="bg-white hover:bg-zinc-200 text-black p-4 rounded-2xl shadow-2xl shadow-white/10 transition-all hover:scale-110 active:scale-95 group relative"
         >
           <MessageSquare className="w-6 h-6" />
-          <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 border-2 border-[#0f172a] rounded-full" />
+          <div className="absolute -top-1 -right-1 w-3 h-3 bg-zinc-500 border-2 border-black rounded-full" />
         </button>
       )}
     </div>
