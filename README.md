@@ -1,7 +1,5 @@
 # AI Money Mentor - Your Personal Finance Copilot
 
-![AI Money Mentor Dashboard Mockup](file:///C:/Users/91949/.gemini/antigravity/brain/455e7250-7fc4-4a5f-8463-7eb6bd78f880/money_mentor_dashboard_mockup_1774775472527.png)
-
 AI Money Mentor is a premium, AI-powered personal finance advisor specifically designed for the Indian market. It bridges the gap between complex financial planning and everyday users, making wealth management as simple as a conversation.
 
 ---
